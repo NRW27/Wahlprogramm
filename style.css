@@ -282,6 +282,12 @@
     margin-bottom: var(--wp-space-lg);
 }
 
+@media (orientation: portrait) {
+    .wp-chat-grid {
+        gap: clamp(var(--wp-space-sm), calc(var(--wp-space-lg) - 5vh), var(--wp-space-lg));
+    }
+}
+
 /* Anbieter Auswahl */
 .wp-provider-options {
     display: flex;
@@ -436,7 +442,7 @@
 
 @media (orientation: landscape) {
     .wp-chat-grid {
-        gap: clamp(var(--wp-space-sm), calc(var(--wp-space-lg) - 5vh), var(--wp-space-lg));
+        gap: clamp(var(--wp-space-sm), calc(var(--wp-space-lg) - 10vh), var(--wp-space-lg));
     }
 
     .wp-candidate-name {
@@ -581,7 +587,7 @@
     }
 
     .wp-candidate-name {
-        width: auto;
+        width: 100%;
         max-width: 100%;
         font-size: clamp(0.75rem, 3.2vw, 0.875rem);
         line-height: 1.2;
