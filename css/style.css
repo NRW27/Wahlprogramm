@@ -515,3 +515,40 @@
         scroll-behavior: auto !important;
     }
 }
+
+/* Kompakte Touch-Ansicht im Querformat */
+@media (orientation: landscape) {
+    .wp-provider-select {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .wp-provider-options {
+        flex: 1 1 0;
+        flex-wrap: nowrap;
+        min-width: 0;
+        gap: clamp(0.25rem, 1vw, 0.75rem);
+    }
+
+    .wp-provider-label {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .wp-provider-btn {
+        width: 100%;
+        min-width: 0;
+        padding: clamp(0.25rem, 0.75vh, 0.5rem) clamp(0.25rem, 1vw, 0.75rem);
+        font-size: clamp(0.75rem, 2.5vw, 1rem);
+        white-space: nowrap;
+    }
+
+    .wp-candidate-name {
+        font-size: clamp(0.75rem, 4vh, 1.5rem);
+    }
+}
+
+.wp-candidate-label {
+    -webkit-tap-highlight-color: transparent;
+}
