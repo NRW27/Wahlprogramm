@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahlprogramm KI-Chat - Die Linke Duisburg</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 
+      Wurzel-Container:
+      Isoliert die Styles für eine spätere, problemlose Integration in die Zielseite.
+    -->
+    <div class="wp-widget-root">
+        <header class="wp-header">
+            <img src="Logo/Logo.png" alt="Die Linke Duisburg" class="wp-logo">
+        </header>
+
+        <main class="wp-main">
+            <!-- Bereich 1: Wahlprogramm PDF -->
+            <section class="wp-section wp-pdf-section">
+                <h1 class="wp-headline">Unser Wahlprogramm</h1>
+                <p class="wp-text">Lesen Sie unsere Positionen und Forderungen für ein soziales und gerechtes Duisburg.</p>
+                <div class="wp-pdf-actions">
+                    <a href="Wahlprogramm/Wahlprogramm.pdf" target="_blank" rel="noopener noreferrer" class="wp-btn wp-btn-primary">
+                        Wahlprogramm öffnen (PDF)
+                    </a>
+                </div>
+                <!-- Optionale Vorschau: Versteckt auf kleinen Bildschirmen via CSS -->
+                <div class="wp-pdf-preview" aria-hidden="true">
+                    <object data="Wahlprogramm/Wahlprogramm.pdf" type="application/pdf" width="100%" height="100%">
+                        <p>Vorschau nicht verfügbar. Bitte nutzen Sie den Download-Button.</p>
+                    </object>
+                </div>
+            </section>
+
+            <!-- Bereich 2: KI Chat -->
+            <section class="wp-section wp-chat-section">
+                <h2 class="wp-headline">Fragen zum Programm? Chatte mit uns!</h2>
+                <p class="wp-text">Wähle deinen bevorzugten KI-Dienst und einen Kandidaten, um das Wahlprogramm interaktiv zu diskutieren.</p>
+                
+                <div class="wp-chat-grid">
+                    <!-- Anbieter-Auswahl -->
+                    <div class="wp-provider-select">
+                        <!-- Die Optionen werden per JS aus der Konfiguration gerendert -->
+                        <div class="wp-provider-options" role="radiogroup" aria-label="KI Anbieter" id="provider-group">
+                        </div>
+                    </div>
+
+                    <!-- Kandidaten-Auswahl -->
+                    <div class="wp-candidate-select">
+                        <!-- Die Optionen werden per JS aus der Konfiguration gerendert -->
+                        <div class="wp-candidate-options" role="radiogroup" aria-label="Kandidat" id="candidate-group">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weiterleitung -->
+                <div class="wp-action-area">
+                    <button id="wp-start-chat-btn" class="wp-btn wp-btn-cta">Mit dem Wahlprogramm chatten</button>
+                    <p class="wp-disclaimer">
+                        Hinweis: Der Chat findet bei einem externen Anbieter statt. Es gelten dessen Datenschutzbestimmungen und Nutzungsbedingungen.
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- App Logik -->
+    <script src="js/main.js"></script>
+</body>
+</html>
