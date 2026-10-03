@@ -284,7 +284,7 @@
 
 @media (orientation: portrait) {
     .wp-chat-grid {
-        gap: clamp(var(--wp-space-sm), calc(var(--wp-space-lg) - 5vh), var(--wp-space-lg));
+        gap: clamp(0px, calc(var(--wp-space-lg) - 10vh), var(--wp-space-lg));
     }
 }
 
